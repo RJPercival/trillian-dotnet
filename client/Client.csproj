@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.10.0" />
+    <PackageReference Include="Grpc" Version="2.24.0" />
+    <PackageReference Include="Grpc.Auth" Version="2.24.0" />
+    <PackageReference Include="Grpc.Core" Version="2.24.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.24.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.24.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.24.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\google\api\annotations.proto" GrpcServices="None" ProtoRoot="Protos">
+      <SourceUri>https://raw.githubusercontent.com/googleapis/googleapis/master/google/api/annotations.proto</SourceUri>
+    </Protobuf>
+    <Protobuf Include="Protos\crypto\keyspb\keyspb.proto" GrpcServices="None" ProtoRoot="Protos">
+      <SourceUri>https://raw.githubusercontent.com/google/trillian/master/crypto/keyspb/keyspb.proto</SourceUri>
+    </Protobuf>
+    <Protobuf Include="Protos\crypto\sigpb\sigpb.proto" GrpcServices="None" ProtoRoot="Protos">
+      <SourceUri>https://raw.githubusercontent.com/google/trillian/master/crypto/sigpb/sigpb.proto</SourceUri>
+    </Protobuf>
+    <Protobuf Include="Protos\google\rpc\status.proto" GrpcServices="None" ProtoRoot="Protos">
+      <SourceUri>https://raw.githubusercontent.com/googleapis/googleapis/master/google/rpc/status.proto</SourceUri>
+    </Protobuf>
+    <Protobuf Include="Protos\google\api\http.proto" GrpcServices="None">
+      <SourceUri>https://raw.githubusercontent.com/googleapis/googleapis/master/google/api/http.proto</SourceUri>
+    </Protobuf>
+    <Protobuf Include="Protos\trillian.proto" GrpcServices="None" ProtoRoot="Protos">
+      <SourceUri>https://raw.githubusercontent.com/google/trillian/master/trillian.proto</SourceUri>
+    </Protobuf>
+    <Protobuf Include="Protos\trillian_log_api.proto" GrpcServices="Client" ProtoRoot="Protos">
+      <SourceUri>https://raw.githubusercontent.com/google/trillian/master/trillian_log_api.proto</SourceUri>
+    </Protobuf>
+  </ItemGroup>
+
+</Project>
